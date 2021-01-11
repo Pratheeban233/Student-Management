@@ -17,7 +17,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 public class DataSourceConfig {
 
 	@Autowired
-	Environment env;
+	private Environment env;
 	
 	@Bean
 	public JdbcTemplate jdbcTemplate()
@@ -32,12 +32,12 @@ public class DataSourceConfig {
 	{
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		
-		System.out.println("className : "+env.getProperty("spring.datasource.driverclassname"));
+		System.out.println("className : "+env.getProperty("spring.datasource.driver-class-name"));
 		
-		dataSource.setDriverClassName(env.getProperty("spring.datasource.driverclassname"));
-		dataSource.setUrl("spring.datasource.url");
-		dataSource.setUsername("spring.datasource.username");
-		dataSource.setPassword("spring.datasource.password");
+		dataSource.setDriverClassName(env.getProperty("spring.datasource.driver-class-name"));
+		dataSource.setUrl(env.getProperty("spring.datasource.url"));
+		dataSource.setUsername(env.getProperty("spring.datasource.username"));
+		dataSource.setPassword(env.getProperty("spring.datasource.password"));
 		
 		return dataSource;
 	}

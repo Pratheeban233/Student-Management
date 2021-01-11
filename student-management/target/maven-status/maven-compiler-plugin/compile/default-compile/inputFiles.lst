@@ -1,8 +1,8 @@
-E:\Spring_ELearning\jspcrudapp\student-management\src\main\java\com\prathi\sm\api\Student.java
-E:\Spring_ELearning\jspcrudapp\student-management\src\main\java\com\prathi\sm\controllers\StudentController.java
-E:\Spring_ELearning\jspcrudapp\student-management\src\main\java\com\prathi\sm\configuration\DataSourceConfig.java
-E:\Spring_ELearning\jspcrudapp\student-management\src\main\java\com\prathi\sm\configuration\StudentManagementAppConfiguration.java
-E:\Spring_ELearning\jspcrudapp\student-management\src\main\java\com\prathi\sm\configuration\StudentAppInitializer.java
-E:\Spring_ELearning\jspcrudapp\student-management\src\main\java\com\prathi\sm\dao\StudentDaoImpl.java
-E:\Spring_ELearning\jspcrudapp\student-management\src\main\java\com\prathi\sm\dao\StudentDAO.java
-E:\Spring_ELearning\jspcrudapp\student-management\src\main\java\com\prathi\sm\rowmapper\StudentRowmapper.java
+C:\Users\mnpra\git\student-management\student-management\src\main\java\com\prathi\sm\configuration\StudentManagementAppConfiguration.java
+C:\Users\mnpra\git\student-management\student-management\src\main\java\com\prathi\sm\dao\StudentDaoImpl.java
+C:\Users\mnpra\git\student-management\student-management\src\main\java\com\prathi\sm\configuration\DataSourceConfig.java
+C:\Users\mnpra\git\student-management\student-management\src\main\java\com\prathi\sm\configuration\StudentAppInitializer.java
+C:\Users\mnpra\git\student-management\student-management\src\main\java\com\prathi\sm\api\Student.java
+C:\Users\mnpra\git\student-management\student-management\src\main\java\com\prathi\sm\dao\StudentDAO.java
+C:\Users\mnpra\git\student-management\student-management\src\main\java\com\prathi\sm\rowmapper\StudentRowmapper.java
+C:\Users\mnpra\git\student-management\student-management\src\main\java\com\prathi\sm\controllers\StudentController.java

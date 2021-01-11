@@ -14,7 +14,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<spring.version>5.2.12.RELEASE</spring.version>
-		<mySql.version>8.0.21</mySql.version>
+		<mySql.version>8.0.16</mySql.version>
 	</properties>
 	
 	<dependencies>
