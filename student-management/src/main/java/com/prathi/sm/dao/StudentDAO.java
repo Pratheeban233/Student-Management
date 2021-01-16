@@ -7,4 +7,6 @@ import com.prathi.sm.api.Student;
 public interface StudentDAO {
 
 	List<Student> showListOfStudents();
+
+	void addStudent(Student student);
 }

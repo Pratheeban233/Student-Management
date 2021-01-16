@@ -6,8 +6,10 @@
 <meta charset="ISO-8859-1">
 <title>SHOW-STUDENTS-LIST</title>
 </head>
+
 <body>
 <h1 align="center">Student-Management</h1>
+<hr>
 	<h2><i>Will show the student list soon</i></h2>
 	
 </body>

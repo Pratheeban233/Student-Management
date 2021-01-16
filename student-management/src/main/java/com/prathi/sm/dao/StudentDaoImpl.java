@@ -25,4 +25,14 @@ public class StudentDaoImpl implements StudentDAO {
 		return listOfStudents;
 	}
 
+	@Override
+	public void addStudent(Student student) {
+
+		String sql = "insert into students (name,mobile,country) values (?,?,?)";
+		
+		Object [] args = {student.getName(),student.getMobile(),student.getCountry()};
+		
+		jdbcTemplate.update(sql, args);
+	}
+
 }
