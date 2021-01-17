@@ -26,4 +26,16 @@ public class serviceImpl implements ServiceInterface{
 		studentDAO.addStudent(student);
 	}
 
+	@Override
+	public Student fetchStudent(int id) {
+		
+		return studentDAO.getStudent(id);
+	}
+
+	@Override
+	public void deleteStudent(int id) {
+	
+		studentDAO.removeStudent(id);
+	}
+
 }

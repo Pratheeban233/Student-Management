@@ -11,4 +11,8 @@ public interface ServiceInterface {
 	List<Student> ListOfStudents();
 	
 	void addStudent(Student student);
+	
+	Student fetchStudent(int id);
+
+	void deleteStudent(int id);
 }

@@ -35,4 +35,23 @@ public class StudentDaoImpl implements StudentDAO {
 		jdbcTemplate.update(sql, args);
 	}
 
+	@Override
+	public Student getStudent(int id) {
+		
+		String sql = "select * from students where id = ?";
+
+		Student theStudent = jdbcTemplate.queryForObject(sql, new StudentRowmapper(), id);
+		
+		return theStudent;
+	}
+
+	@Override
+	public void removeStudent(int id) {
+		
+		String sql = "delete from students where id =?";
+
+		jdbcTemplate.update(sql, id);
+		
+	}
+
 }

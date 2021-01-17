@@ -9,4 +9,8 @@ public interface StudentDAO {
 	List<Student> showListOfStudents();
 
 	void addStudent(Student student);
+
+	Student getStudent(int id);
+
+	void removeStudent(int id);
 }

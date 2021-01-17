@@ -16,7 +16,7 @@
 	<h1 align="center">Student-Management</h1>
 	<hr>
 	<div>
-		<form:form action="addNewStudent">
+		<form:form action="getStudentpage">
 			<button type="submit">Add</button>
 		</form:form>
 	</div>
@@ -37,6 +37,8 @@
 					<td>${student.name}</td>
 					<td>${student.mobile}</td>
 					<td>${student.country}</td>
+					<td><a href="/student-management/updateStudent?id=${student.id}">Update</a></td>
+					<td><a href="/student-management/deleteStudent?id=${student.id}">Delete</a></td>
 				</tr>
 			</c:forEach>
 
