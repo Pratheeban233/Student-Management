@@ -38,4 +38,9 @@ public class serviceImpl implements ServiceInterface{
 		studentDAO.removeStudent(id);
 	}
 
+	@Override
+	public void updateStudent(Student student) {
+		studentDAO.updateStudent(student);
+	}
+
 }

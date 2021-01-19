@@ -29,29 +29,41 @@ public class StudentDaoImpl implements StudentDAO {
 	public void addStudent(Student student) {
 
 		String sql = "insert into students (name,mobile,country) values (?,?,?)";
-		
-		Object [] args = {student.getName(),student.getMobile(),student.getCountry()};
-		
+
+		Object[] args = { student.getName(), student.getMobile(), student.getCountry() };
+
 		jdbcTemplate.update(sql, args);
 	}
 
 	@Override
 	public Student getStudent(int id) {
-		
+
 		String sql = "select * from students where id = ?";
 
 		Student theStudent = jdbcTemplate.queryForObject(sql, new StudentRowmapper(), id);
-		
+
 		return theStudent;
 	}
 
 	@Override
 	public void removeStudent(int id) {
-		
+
 		String sql = "delete from students where id =?";
 
 		jdbcTemplate.update(sql, id);
+
+	}
+
+	@Override
+	public void updateStudent(Student student) {
 		
+		System.out.println("update Student : "+student.toString());
+
+		String sql = "update students set name=?, mobile=?, country=? where id=?";
+
+		Object[] args = { student.getName(), student.getMobile(), student.getCountry(), student.getId() };
+
+		jdbcTemplate.update(sql, args);
 	}
 
 }

@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.prathi.sm.api.Student;
-import com.prathi.sm.dao.StudentDAO;
 import com.prathi.sm.service.ServiceInterface;
 
 @Controller
@@ -25,38 +24,42 @@ public class StudentController {
 
 		List<Student> showListOfStudents = sericeImpl.ListOfStudents();
 		model.addAttribute("studentsList", showListOfStudents);
-		
+
 		return "studentListPage";
 	}
 
-	@PostMapping("/getStudentpage")
-	public String addNewStudent(@ModelAttribute("student") Student student) {
+	@GetMapping("/showStudentpage")
+	public String addNewStudent(Model model) {
+		
+		model.addAttribute("student", new Student());
 
 		return "addstudentPage";
 	}
 
-	@GetMapping("/addStudent")
-	public String addingStudent(Student student) {
+	@PostMapping("/save-Student")
+	public String saveStudent(Student student) {
 
-		sericeImpl.addStudent(student);
+		if (student.getId() == null)
+			sericeImpl.addStudent(student);
+		else
+			sericeImpl.updateStudent(student);
 
 		return "redirect:/showStudent";
 	}
 	
 	@GetMapping("/updateStudent")
-	public String updateStudent(@RequestParam("id") int id, Model model)
-	{
+	public String updateStudent(@RequestParam("id") int id,Model  model) {
 		Student theStudent = sericeImpl.fetchStudent(id);
+		
 		model.addAttribute("student", theStudent);
 		
 		return "addstudentPage";
 	}
-	
+
 	@GetMapping("/deleteStudent")
-	public String deleteStudent(@RequestParam("id") int id)
-	{
+	public String deleteStudent(@RequestParam("id") int id) {
 		sericeImpl.deleteStudent(id);
-		
+
 		return "redirect:/showStudent";
 	}
 

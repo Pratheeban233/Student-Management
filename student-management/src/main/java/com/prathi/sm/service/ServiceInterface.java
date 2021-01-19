@@ -15,4 +15,6 @@ public interface ServiceInterface {
 	Student fetchStudent(int id);
 
 	void deleteStudent(int id);
+
+	void updateStudent(Student student);
 }

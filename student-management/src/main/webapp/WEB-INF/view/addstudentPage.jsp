@@ -15,7 +15,9 @@
 <h3 align="center">Add-Student</h3>
 <hr>
 <div  align="center" >
-<form:form action="addStudent" modelAttribute="student" method="GET">
+<form:form action="save-Student" modelAttribute="student" method="POST">
+
+<form:hidden path="id"/>
 
 <label>Name    : </label> <form:input path="name"/> 
 
@@ -29,7 +31,7 @@
 
 <br><br>
 
-<button type="submit">ADD</button>
+<input type="submit" value="submit">
 
 </form:form>
 </div>

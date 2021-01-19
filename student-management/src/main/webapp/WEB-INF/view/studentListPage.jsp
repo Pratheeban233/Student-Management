@@ -16,7 +16,7 @@
 	<h1 align="center">Student-Management</h1>
 	<hr>
 	<div>
-		<form:form action="getStudentpage">
+		<form:form action="showStudentpage" method="GET">
 			<button type="submit">Add</button>
 		</form:form>
 	</div>
