@@ -3,37 +3,51 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-    
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Add-Student-Page</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+
 </head>
-<body>
+<body class="container">
 
-<h3 align="center">Add-Student</h3>
-<hr>
-<div  align="center" >
-<form:form action="save-Student" modelAttribute="student" method="POST">
+	<h3 align="center">Add-Student</h3>
+	<hr>
+	<div align="center" class=".me-3 ">
+		<form:form action="save-Student" modelAttribute="student"
+			method="POST">
 
-<form:hidden path="id"/>
+			<form:hidden path="id" />
 
-<label>Name    : </label> <form:input path="name"/> 
+			<div class="mb-3 row">
+				<label class="col-sm-3 col-form-label">Name : </label>
+				<div class="col-sm-10">
+					<form:input path="name" class="form-control" />
+				</div>
+			</div>
+			<div class="mb-3 row">
+				<label class="col-sm-3 col-form-label">Mobile : </label>
+				<div  class="col-sm-10">
+					<form:input path="mobile" class="form-control" />
+				</div>
+			</div>
+			<div class="mb-3 row">
+				<label class="col-sm-3 col-form-label">Country : </label>
+				<div  class="col-sm-10">
+					<form:input path="country" class="form-control" />
+				</div>
 
-<br>
+			</div>
+			<button type="submit" value="submit" class="btn btn-outline-success">Submit</button>
 
-<label>Mobile  : </label> <form:input path="mobile"/> 
-
-<br>
-
-<label>Country : </label> <form:input path="country"/> 
-
-<br><br>
-
-<input type="submit" value="submit">
-
-</form:form>
-</div>
+		</form:form>
+	</div>
 </body>
 </html>
