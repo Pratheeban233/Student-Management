@@ -1,5 +1,6 @@
 package com.prathi.sm.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class StudentDaoImpl implements StudentDAO {
 		String sql = "SELECT * FROM students";
 
 		List<Student> listOfStudents = jdbcTemplate.query(sql, new StudentRowmapper());
-
+		
 		return listOfStudents;
 	}
 
@@ -56,8 +57,8 @@ public class StudentDaoImpl implements StudentDAO {
 
 	@Override
 	public void updateStudent(Student student) {
-		
-		System.out.println("update Student : "+student.toString());
+
+		System.out.println("update Student : " + student.toString());
 
 		String sql = "update students set name=?, mobile=?, country=? where id=?";
 
