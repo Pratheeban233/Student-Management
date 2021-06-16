@@ -6,15 +6,22 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Login here</title>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	crossorigin="anonymous">
+<title>SignUp here</title>
 </head>
 <body>
 
-	<h3 align="center">Hi Pratheeban..Welcome to Student Management Application!!!</h3>
+	<h1>SignUp here !!!</h1>
+
+	<form:form action="process-signup" method="POST"
+		modelAttribute="signupDTO">
+	
+	UserName : <form:input path="username" />
+		<br>
+	Password : <form:input path="password" />
+		<br>
+		<input type="submit" value="signup">
+
+	</form:form>
 
 </body>
 </html>

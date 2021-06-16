@@ -1,6 +1,5 @@
 package com.prathi.sm.dao;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.prathi.sm.api.Student;
+import com.prathi.sm.dto.SignUpDTO;
 import com.prathi.sm.rowmapper.StudentRowmapper;
 
 @Repository
@@ -15,6 +15,20 @@ public class StudentDaoImpl implements StudentDAO {
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
+	
+	@Override
+	public void saveuser(SignUpDTO signUpDTO) {
+		
+		String saveusers = "INSERT INTO users values (?,?,?)";
+		
+		jdbcTemplate.update(saveusers, signUpDTO.getUsername(),signUpDTO.getPassword(),true);
+		
+		String saveAuthorities = "INSERT INTO authorities values (?,?)";
+		
+		jdbcTemplate.update(saveAuthorities, signUpDTO.getUsername(),"User");
+		
+	}
+	
 
 	@Override
 	public List<Student> showListOfStudents() {

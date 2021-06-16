@@ -28,6 +28,12 @@
 		</form:form>
 	</div>
 
+	<div align="right">
+		<form:form action="logout" method="POST">
+			<button type="submit" class="btn btn-outline-success">logout</button>
+		</form:form>
+	</div>
+
 	<div align="center" class="pt-2">
 		<table border="1" class="table table-striped border border-5">
 			<thead>
